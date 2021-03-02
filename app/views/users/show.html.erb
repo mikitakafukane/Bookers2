@@ -12,7 +12,7 @@
       <table class="table">
         <thead>
           <tr>
-            <th colspan="1"></th>
+            <th colspan="2"></th>
             <th>title</th>
             <th>opinion</th>
           </tr>
@@ -23,6 +23,7 @@
             <td><%= link_to attachment_image_tag(@user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(@user) %></td>
             <td><%= link_to book.title, book_path(book) %></td>
             <td><%= book.body %></td>
+            <td>コメント数:<%= @book.book_comments.count %></td>
           </tr>
           <% end %>
         <tbody>
