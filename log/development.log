@@ -33651,3 +33651,1431 @@ Processing by HomesController#top as HTML
 Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.1ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "book_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "book_comment_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302071407"]]
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 60.47.94.178 at 2021-03-02 07:56:24 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (455.3ms)
+Completed 500 Internal Server Error in 6588ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<#<Class:0x0000000004ff2d88>:0x00000000057ef748>):
+     8:       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+     9:         <ul class="navbar-nav ml-auto">
+    10:         <% if user_signed_in? %>
+    11:           <li><%= link_to 'Home',user_path(current_user.id), class: 'fas fa-home nav-link text-light' %></li>
+    12:           <li><%= link_to 'Users',users_path, class: 'fas fa-users nav-link text-light' %></li>
+    13:           <li><%= link_to 'Books',books_path, class: 'fas fa-book-open nav-link text-light' %></li>
+    14:           <li><%= link_to 'Logout',destroy_user_session_path, method: :delete, class: 'fas fa-sign-out-alt nav-link text-light' %></li>
+  
+app/views/layouts/_header.html.erb:11:in `_app_views_layouts__header_html_erb__2371742638875624263_70120910937760'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb___1416963474472414285_46168060'
+Started GET "/" for 60.47.94.178 at 2021-03-02 07:59:48 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  Rendered layouts/_header.html.erb (14.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 103ms (Views: 100.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_in" for 60.47.94.178 at 2021-03-02 07:59:55 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/users/3
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/3" for 60.47.94.178 at 2021-03-02 07:59:55 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.3ms)
+  Rendered books/_form.html.erb (9.1ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 189ms (Views: 147.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users" for 60.47.94.178 at 2021-03-02 08:00:10 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (4.8ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:21
+  Rendered users/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 119ms (Views: 114.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 60.47.94.178 at 2021-03-02 08:00:12 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.3ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 183ms (Views: 171.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 08:00:20 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.1ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+        <%= book_comments.user.name );@output_buffer.safe_append='
+        '.freeze;@output_buffer.append=( book_comments.created_at.strftime('%Y/
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unknown type of %string
+....created_at.strftime('%Y/%m/%d') );@output_buffer.append=( b...
+...                            ^~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+....created_at.strftime('%Y/%m/%d') );@output_buffer.append=( b...
+...                            ^~~):
+  
+app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+app/views/books/show.html.erb:33: unknown type of %string
+app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:09:30 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (455.2ms)
+  Rendered books/_form.html.erb (17.1ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (502.1ms)
+Completed 500 Internal Server Error in 562ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comments.count}コメント", book_path(book) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_30504020'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_30504020'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:10:57 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.9ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comments.count}コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_40499440'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_40499440'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:12:09 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.7ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061103476280'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061103476280'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:14:31 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.8ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{ book.book_comments.count } コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061100163140'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061100163140'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:17:05 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (3.2ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:29
+  Rendered books/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:           </tr>
+    29:           <%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %>
+    30:           <% end %>
+    31:         <tbody>
+    32:       </table>
+  
+app/views/books/index.html.erb:29:in `block in _app_views_books_index_html_erb__149536526827540715_70061092147040'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061092147040'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:20:31 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.7ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  Rendered books/index.html.erb within layouts/application (16.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `book_comment' for #<Book:0x00007f70be82c658>
+Did you mean?  book_comments
+               book_comments=):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comment.count} コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061104508120'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061104508120'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:20:47 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.8ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061098847820'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061098847820'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:34:15 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.8ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  Rendered books/index.html.erb within layouts/application (364.1ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book_id' for #<#<Class:0x00000000039eae00>:0x000000000226c418>
+Did you mean?  book):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book_id.book_comments.count} コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061106636500'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061106636500'
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 08:36:13 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (1.7ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: book_comments.book_id: SELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?):
+    25:             <td><%= link_to attachment_image_tag(book.user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg", size:'50x50'), user_path(book.user) %></td>
+    26:             <td><%= link_to book.title, book_path(book.id) %></td>
+    27:             <td><%= book.body %></td>
+    28:             <td><%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %></td>
+    29:           </tr>
+    30:           <% end %>
+    31:         <tbody>
+  
+app/views/books/index.html.erb:28:in `block in _app_views_books_index_html_erb__149536526827540715_70061105669460'
+app/views/books/index.html.erb:23:in `_app_views_books_index_html_erb__149536526827540715_70061105669460'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "book_comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210302071407"]]
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "book_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "book_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302071407"]]
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 09:02:39 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.3ms)
+  Rendered users/_userinfo.html.erb (5.1ms)
+  Rendered books/_form.html.erb (5.0ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 4]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (64.4ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 322ms (Views: 295.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/books/" for 60.47.94.178 at 2021-03-02 09:03:07 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (0.4ms)
+  Rendered users/_userinfo.html.erb (502.0ms)
+  Rendered books/_form.html.erb (22.8ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 3]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 4]]
+  ↳ app/views/books/index.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/index.html.erb:25
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 5]]
+  ↳ app/views/books/index.html.erb:28
+  Rendered books/index.html.erb within layouts/application (580.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 837ms (Views: 799.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:06:52 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+        <%= book_comment.user.name );@output_buffer.safe_append='
+        '.freeze;@output_buffer.append=( book_comment.created_at.strftime('%Y/
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unknown type of %string
+....created_at.strftime('%Y/%m/%d') );@output_buffer.append=( b...
+...                            ^~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+....created_at.strftime('%Y/%m/%d') );@output_buffer.append=( b...
+...                            ^~~):
+  
+app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+app/views/books/show.html.erb:33: unknown type of %string
+app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:14:09 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+        <%= book_comment.user.name );@output_buffer.safe_append='
+        '.freeze;@output_buffer.append=( book_comment.created_at.strftime('%Y/
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unknown type of %string
+....created_at.strftime('%Y/%m/%d') );@output_buffer.safe_appen...
+...                            ^~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+....created_at.strftime('%Y/%m/%d') );@output_buffer.safe_appen...
+...                            ^~~):
+  
+app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+app/views/books/show.html.erb:33: unknown type of %string
+app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:17:52 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+        <%= book_comment.user.name );@output_buffer.safe_append='
+        '.freeze;@output_buffer.append=( @book_comment.created_at.strftime('%Y/
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: unknown type of %string
+....created_at.strftime('%Y/%m/%d') );@output_buffer.safe_appen...
+...                            ^~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+....created_at.strftime('%Y/%m/%d') );@output_buffer.safe_appen...
+...                            ^~~):
+  
+app/views/books/show.html.erb:33: unmatched close parenthesis: /p>
+app/views/books/show.html.erb:33: unknown type of %string
+app/views/books/show.html.erb:33: syntax error, unexpected end-of-input
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:18:50 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:35: unknown regexp options - dv
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:35: unmatched close parenthesis: /p>
+        <%= book_comment.user.name );@output_buffer.safe_append='
+        '.freeze;@output_buffer.append=( book_comment.comment );@output_buffer.safe_append='
+'.freeze;       end 
+@output_buffer.safe_append='      </i
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:36: syntax error, unexpected '<'
+      <div class="new-comment">
+      ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:38: syntax error, unexpected tINTEGER, expecting ')'
+...d=( f.text_area:comment,rows:'5', placeholder:"コメント...
+...                              ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:42: unknown regexp options - dv
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:43: syntax error, unexpected '<'
+  </div>
+  ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:44: unknown regexp options - dv
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:48: unterminated string meets end of file
+          end
+              ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:48: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/books/show.html.erb:35: unknown regexp options - dv
+app/views/books/show.html.erb:35: unmatched close parenthesis: /p>
+app/views/books/show.html.erb:36: syntax error, unexpected '<'
+app/views/books/show.html.erb:38: syntax error, unexpected tINTEGER, expecting ')'
+app/views/books/show.html.erb:42: unknown regexp options - dv
+app/views/books/show.html.erb:43: syntax error, unexpected '<'
+app/views/books/show.html.erb:44: unknown regexp options - dv
+app/views/books/show.html.erb:48: unterminated string meets end of file
+app/views/books/show.html.erb:48: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:19:15 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.2ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:29
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (24.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 131ms (Views: 122.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 09:20:35 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.4ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  Rendered books/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 105ms (Views: 97.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 09:22:31 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `repuire' for #<ActionController::Parameters:0x00007f0286946120>
+Did you mean?  require
+               required):
+  
+app/controllers/book_comments_controller.rb:17:in `book_comment_params'
+app/controllers/book_comments_controller.rb:5:in `create'
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 09:23:21 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `repuired' for #<ActionController::Parameters:0x00007f028c5bbd38>
+Did you mean?  required
+               require):
+  
+app/controllers/book_comments_controller.rb:17:in `book_comment_params'
+app/controllers/book_comments_controller.rb:5:in `create'
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 09:23:32 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `repuire' for #<ActionController::Parameters:0x00007f0285e8dbe8>
+Did you mean?  require
+               required):
+  
+app/controllers/book_comments_controller.rb:17:in `book_comment_params'
+app/controllers/book_comments_controller.rb:5:in `create'
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 09:23:56 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for BookComment.):
+  
+app/controllers/book_comments_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "book_comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210302071407"]]
+  ↳ bin/rails:9
+  [1m[35m (47.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateBookComments (20210302071407)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "book_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "book_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210302071407_create_book_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302071407"]]
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCommentToBookComments (20210302093859)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "book_comments" ADD "Comment" varchar[0m
+  ↳ db/migrate/20210302093859_add_comment_to_book_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302093859"]]
+  ↳ bin/rails:9
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 09:40:01 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for BookComment.):
+  
+app/controllers/book_comments_controller.rb:5:in `create'
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 10:03:45 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 2.5ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for BookComment.):
+  
+app/controllers/book_comments_controller.rb:5:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCommentToBookComments (20210302093859)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abook_comments" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "book_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "Comment" varchar DEFAULT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "abook_comments" ("id","user_id","book_id","created_at","updated_at","Comment")
+                     SELECT "id","user_id","book_id","created_at","updated_at","Comment" FROM "book_comments"[0m
+  ↳ bin/rails:9
+  [1m[35m (5.6ms)[0m  [1m[35mDROP TABLE "book_comments"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "book_comments" ("id" integer NOT NULL PRIMARY KEY, "user_id" integer DEFAULT NULL, "book_id" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "book_comments" ("id","user_id","book_id","created_at","updated_at")
+                     SELECT "id","user_id","book_id","created_at","updated_at" FROM "abook_comments"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "abook_comments"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210302093859"]]
+  ↳ bin/rails:9
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCommentToBookComments (20210302093859)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "book_comments" ADD "comment" varchar[0m
+  ↳ db/migrate/20210302093859_add_comment_to_book_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210302093859"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 10:06:06 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2GmNwaEIEXJoFOqSjCDEELYoJFyqUZq6lgEhh/CksgHZ0sIl+JULGdZzNaKam18AWslVtw9s0uGUBRSxQvOxg==", "book_comment"=>{"comment"=>"東京"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBookComment Create (3.4ms)[0m  [1m[32mINSERT INTO "book_comments" ("user_id", "book_id", "created_at", "updated_at", "comment") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["book_id", 1], ["created_at", "2021-03-02 10:06:06.850822"], ["updated_at", "2021-03-02 10:06:06.850822"], ["comment", "東京"]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 93ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:06:07 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:37: syntax error, unexpected ':'
+...ut_buffer.append=( f.text_area: comment,rows:'5', placeholde...
+...                              ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:37: syntax error, unexpected ',', expecting ')'
+... f.text_area: comment,rows:'5', placeholder:"コメントを...
+...                              ^):
+  
+app/views/books/show.html.erb:37: syntax error, unexpected ':'
+app/views/books/show.html.erb:37: syntax error, unexpected ',', expecting ')'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:07:17 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:37: syntax error, unexpected ':'
+...ut_buffer.append=( f.text_area: comment,rows:'5', placeholde...
+...                              ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:37: syntax error, unexpected ',', expecting ')'
+... f.text_area: comment,rows:'5', placeholder:"コメントを...
+...                              ^):
+  
+app/views/books/show.html.erb:37: syntax error, unexpected ':'
+app/views/books/show.html.erb:37: syntax error, unexpected ',', expecting ')'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:09:41 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (652.7ms)
+  Rendered books/_form.html.erb (32.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  Rendered books/show.html.erb within layouts/application (1149.5ms)
+Completed 500 Internal Server Error in 1236ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book_comment' for #<#<Class:0x000000000482f100>:0x000000000447ae38>
+Did you mean?  book_comments
+               @book_comment):
+    27:         <p>コメント件数:<%= @book.book_comments.count %></p>
+    28:         <% @book.book_comments.each do |book_comments| %>
+    29:           <p><%= image_tag('no_image.jpg') %></p>
+    30:           <%= book_comment.user.name %>
+    31:           <%= book_comment.created_at.strftime('%Y/%m/%d') %>
+    32:           <%= book_comment.comment %>
+    33:         <% end %>
+  
+app/views/books/show.html.erb:30:in `block in _app_views_books_show_html_erb___54573470228307103_37841280'
+app/views/books/show.html.erb:28:in `_app_views_books_show_html_erb___54573470228307103_37841280'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:11:02 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.2ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  Rendered books/show.html.erb within layouts/application (301.2ms)
+Completed 500 Internal Server Error in 314ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `book_comment' for #<#<Class:0x000000000482f100>:0x0000000006c05840>
+Did you mean?  book_comments
+               @book_comment):
+    27:         <p>コメント件数:<%= @book.book_comments.count %></p>
+    28:         <% @book.book_comments.each do |book_comments| %>
+    29:           <p><%= image_tag('no_image.jpg') %></p>
+    30:           <%= book_comment.user.name %>
+    31:           <%= book_comment.created_at.strftime('%Y/%m/%d') %><%= book_comment.comment %>
+    32:         <% end %>
+    33:         </div>
+  
+app/views/books/show.html.erb:30:in `block in _app_views_books_show_html_erb___54573470228307103_56616840'
+app/views/books/show.html.erb:28:in `_app_views_books_show_html_erb___54573470228307103_56616840'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:13:01 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (2.7ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (31.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 277ms (Views: 267.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 10:13:21 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFC6bvzcAH+ZsPIssgL48s5tn5mI6Hu9vz0v5CFcOUaYVldRbbp0FjdJbVByWBaejd4aXiZ8jpzTNT8w+5VlSA==", "book_comment"=>{"comment"=>"こんにちは"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBookComment Create (2.0ms)[0m  [1m[32mINSERT INTO "book_comments" ("user_id", "book_id", "created_at", "updated_at", "comment") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["book_id", 1], ["created_at", "2021-03-02 10:13:21.280295"], ["updated_at", "2021-03-02 10:13:21.280295"], ["comment", "こんにちは"]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 22ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:13:21 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.6ms)
+  Rendered books/_form.html.erb (2.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 110.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:21:47 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 2.6ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:32: syntax error, unexpected ')', expecting then or ';' or '\n'
+..._comment.user == current_user );@output_buffer.safe_append='
+...                              ^
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:36: syntax error, unexpected end, expecting ')'
+'.freeze;           end 
+                    ^~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:52: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/Bookers2/app/views/books/show.html.erb:54: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/books/show.html.erb:32: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/books/show.html.erb:36: syntax error, unexpected end, expecting ')'
+app/views/books/show.html.erb:52: syntax error, unexpected ensure, expecting ')'
+app/views/books/show.html.erb:54: syntax error, unexpected end, expecting ')'
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:23:00 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (304.8ms)
+  Rendered books/_form.html.erb (11.5ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (342.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 538ms (Views: 530.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/1/book_comments/1" for 60.47.94.178 at 2021-03-02 10:23:05 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"M1ZPbgw85dZoouOfRisYgj3KUVkligdG0I7fu0RXRFPPUKJRnVqRv8ZbfOOGcfbufnnUnose8me8hs9vnp4YXQ==", "book_id"=>"1", "id"=>"1"}
+  [1m[36mBookComment Load (0.2ms)[0m  [1m[34mSELECT  "book_comments".* FROM "book_comments" WHERE "book_comments"."id" = ? AND "book_comments"."book_id" = ? LIMIT ?[0m  [["id", 1], ["book_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[36mBookComment Destroy (0.7ms)[0m  [1m[31mDELETE FROM "book_comments" WHERE "book_comments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:12
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 15ms (ActiveRecord: 8.2ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:23:05 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.3ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 141ms (Views: 133.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/books/1/book_comments/2" for 60.47.94.178 at 2021-03-02 10:23:22 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8UawkBoyU9THCgj/OrKN9HUtchokf6+mhB7rkiWeshENQF2vi1QnvWnzl4P66GOYNp733YrrWofoFvtG/1fuHw==", "book_id"=>"1", "id"=>"2"}
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT  "book_comments".* FROM "book_comments" WHERE "book_comments"."id" = ? AND "book_comments"."book_id" = ? LIMIT ?[0m  [["id", 2], ["book_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[36mBookComment Destroy (1.4ms)[0m  [1m[31mDELETE FROM "book_comments" WHERE "book_comments"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/book_comments_controller.rb:12
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:12
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 12ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:23:23 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.4ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  Rendered books/show.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 108ms (Views: 100.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/books/1/book_comments" for 60.47.94.178 at 2021-03-02 10:23:34 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BookCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HPcwxV1KQ5D86Q3so+YvM80tbu4hI5sW/YMmta8G29/g8d36zCw3+VIQkpBjvMFfjp7rKY+3bjeRizZhdc+H0Q==", "book_comment"=>{"comment"=>"コメント成功"}, "commit"=>"送信する", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[36mBookComment Create (1.4ms)[0m  [1m[32mINSERT INTO "book_comments" ("user_id", "book_id", "created_at", "updated_at", "comment") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 3], ["book_id", 1], ["created_at", "2021-03-02 10:23:34.141335"], ["updated_at", "2021-03-02 10:23:34.141335"], ["comment", "コメント成功"]]
+  ↳ app/controllers/book_comments_controller.rb:7
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/book_comments_controller.rb:7
+Redirected to https://e34fbc4e02fa4a2ea867ff6b29f5af12.vfs.cloud9.us-east-1.amazonaws.com/books/1
+Completed 302 Found in 25ms (ActiveRecord: 9.7ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:23:34 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.1ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 144ms (Views: 136.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/3" for 60.47.94.178 at 2021-03-02 10:23:39 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.2ms)
+  Rendered books/_form.html.erb (2.8ms)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 158ms (Views: 147.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 60.47.94.178 at 2021-03-02 10:23:41 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (2.9ms)
+  Rendered books/_form.html.erb (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:21
+  Rendered users/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 102ms (Views: 96.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 60.47.94.178 at 2021-03-02 10:23:43 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.1ms)
+  Rendered books/_form.html.erb (5.6ms)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:21
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 238ms (Views: 229.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 60.47.94.178 at 2021-03-02 10:23:45 +0000
+Cannot render console from 60.47.94.178! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:8
+  Rendering books/show.html.erb within layouts/application
+  Rendered users/_userinfo.html.erb (3.0ms)
+  Rendered books/_form.html.erb (1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:27
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/show.html.erb:28
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:30
+  Rendered books/show.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 127ms (Views: 118.8ms | ActiveRecord: 0.7ms)
+
+
