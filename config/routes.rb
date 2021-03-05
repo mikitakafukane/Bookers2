@@ -13,11 +13,12 @@ Rails.application.routes.draw do
     get :follower
   end
 
-
   get "home/about" => "homes#about", as: "about"
 
   post 'follow/:id' => 'relationships#create', as: 'follow'
   post 'unfollow/:id' => 'relationships#destroy', as: 'unfollow'
+  
+  get '/search', to: 'searchs#search'
 
 
 end
