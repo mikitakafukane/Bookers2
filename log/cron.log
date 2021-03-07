@@ -1,0 +1,91 @@
+Running via Spring preloader in process 15650
+Running via Spring preloader in process 16053
+Running via Spring preloader in process 16586
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+/home/ec2-user/environment/Bookers2/app/mailers/daily_mailer.rb:7: syntax error, unexpected tLABEL, expecting do or '{' or '('
+      default to: ->{ User.pluck(:email }
+              ^~~
+/home/ec2-user/environment/Bookers2/app/mailers/daily_mailer.rb:7: syntax error, unexpected '}', expecting ')'
+...ult to: ->{ User.pluck(:email }
+...                              ^
+Running via Spring preloader in process 17034
+Running via Spring preloader in process 17480
+Running via Spring preloader in process 17895
+Running via Spring preloader in process 18288
+Running via Spring preloader in process 18673
+Running via Spring preloader in process 19068
+Running via Spring preloader in process 19518
+Running via Spring preloader in process 19907
+Running via Spring preloader in process 20331
+Running via Spring preloader in process 20721
+Running via Spring preloader in process 22227
+Running via Spring preloader in process 22676
+Running via Spring preloader in process 23027
+Running via Spring preloader in process 24362
+Running via Spring preloader in process 24759
+Running via Spring preloader in process 25138
+Running via Spring preloader in process 25518
+Running via Spring preloader in process 25953
+Running via Spring preloader in process 26339
+Running via Spring preloader in process 26727
+Running via Spring preloader in process 27106
+Running via Spring preloader in process 27546
+Running via Spring preloader in process 28677
+Running via Spring preloader in process 29078
+Running via Spring preloader in process 29491
+Running via Spring preloader in process 29879
+Running via Spring preloader in process 30263
+Running via Spring preloader in process 30647
+Running via Spring preloader in process 31023
+Running via Spring preloader in process 31482
+Running via Spring preloader in process 31892
+Running via Spring preloader in process 32275
+Running via Spring preloader in process 32656
+Running via Spring preloader in process 597
+Running via Spring preloader in process 987
+Running via Spring preloader in process 1370
+Running via Spring preloader in process 1841
+Running via Spring preloader in process 2240
+Running via Spring preloader in process 2622
+Running via Spring preloader in process 3034
+Running via Spring preloader in process 3489
+Running via Spring preloader in process 3907
+Running via Spring preloader in process 4334
+Running via Spring preloader in process 4748
+Running via Spring preloader in process 5200
+Running via Spring preloader in process 5583
+Running via Spring preloader in process 5985
+Running via Spring preloader in process 6386
+Running via Spring preloader in process 6769
+Running via Spring preloader in process 7282
+Running via Spring preloader in process 7666
+Running via Spring preloader in process 8113
+Running via Spring preloader in process 8530
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+uninitialized constant Batch
+Running via Spring preloader in process 8914
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+uninitialized constant Batch
+Running via Spring preloader in process 9293
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+uninitialized constant Batch
+Running via Spring preloader in process 10151
+Please specify a valid ruby command or the path of a script to run.
+Run 'bin/rails runner -h' for help.
+
+uninitialized constant Batch
+Running via Spring preloader in process 11200
+Running via Spring preloader in process 11617
+Running via Spring preloader in process 12013
+Running via Spring preloader in process 12396
+Running via Spring preloader in process 12800
+Running via Spring preloader in process 13151
+Running via Spring preloader in process 13502
