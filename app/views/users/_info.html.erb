@@ -18,9 +18,12 @@
     </tr>
   </table>
 
+
+
   <% if user == current_user %>
     <%= link_to "", edit_user_path(user), class:"btn btn-outline-dark btn-block fas fa-user-cog" %>
   <% else %>
+      <%= link_to 'チャットをする', chat_path(user), class:"btn btn-warning mb-2" %>
     <% if current_user.following?(user) %>
       <%= link_to 'フォローを外す', unfollow_path(user.id), method: :POST, class:"btn btn-info" %>
     <% else %>
